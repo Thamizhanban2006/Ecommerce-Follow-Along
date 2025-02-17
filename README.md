@@ -155,3 +155,53 @@ In this milestone, we focused on making the home page dynamic by fetching and di
 **Milestone 12 - My Products Page with User-Based Filtering** 
 
 In this milestone, we developed the **My Products** page, which displays only the products added by the logged-in user based on their email. We achieved this by writing a backend endpoint that filters product data in MongoDB using the user's email and sends only the relevant products to the frontend. On the frontend, we implemented a function to fetch this filtered data and dynamically render it using the existing product card component. This milestone provided valuable experience in filtering data based on specific constraints, handling API requests efficiently, and dynamically displaying user-specific content. Successfully completing this step enhances the personalization of the application, allowing users to manage their own products seamlessly. 
+
+# Milestone 13: Edit Uploaded Products
+
+## 🚀 Welcome to Milestone 13!
+In this milestone, we have implemented the functionality to **edit uploaded products** in our application. This involves adding an **edit button**, pre-filling the form with existing data, and updating the product details in our **MongoDB database** via an API endpoint.
+
+---
+
+## 🎯 Learning Goals
+By completing this milestone, we have learned:
+- How to write an **endpoint** to update existing data in **MongoDB**.
+- How to **auto-fill a form** with previous product data and provide an option to edit.
+- How to integrate the **frontend** and **backend** to perform update operations seamlessly.
+
+---
+
+## 🛠 Steps Implemented
+### **1️⃣ Backend: Updating Product Details**
+- Created a **PUT API endpoint** (`/products/:id`) to update existing product details.
+- Used `findByIdAndUpdate()` method in **Mongoose** to modify product details.
+- Handled errors properly for invalid or non-existent product IDs.
+
+### **2️⃣ Frontend: Edit Button & Auto-Fill Form**
+- Added an **edit button** on each product card.
+- When clicked, it fetches existing product details and auto-fills the edit form.
+- Allowed users to modify and update the details.
+- Sent updated data to the backend to save changes.
+
+### **3️⃣ Testing & Debugging**
+- Tested the API endpoint using **Postman**.
+- Verified that data updates correctly in **MongoDB**.
+- Ensured the frontend reflects the updated product details in real-time.
+
+---
+
+## 📥 Submission Guidelines
+1. **Push your code** to your **GitHub repository**.
+2. Ensure your repository is **publicly accessible**.
+3. Update this **README.md** to summarize your progress for Milestone 13.
+4. **Submit the repository link** in the assignment submission section.
+
+---
+
+## 📌 Repository Link
+[Insert your GitHub repository link here]
+
+---
+
+🎉 **Congratulations on completing Milestone 13!** 🎉
+
