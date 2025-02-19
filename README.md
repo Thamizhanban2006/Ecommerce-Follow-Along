@@ -198,10 +198,5 @@ By completing this milestone, we have learned:
 
 ---
 
-## 📌 Repository Link
-[Insert your GitHub repository link here]
 
----
-
-🎉 **Congratulations on completing Milestone 13!** 🎉
 
