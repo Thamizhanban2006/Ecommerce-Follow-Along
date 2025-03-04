@@ -93,11 +93,44 @@ const productSchema = new mongoose.Schema(
             type: Date,
             default: Date.now, // Automatically set the creation date
         },
+        
+ cart: [
+    {
+        productid: {
+            type: String,
+            required: [true, "Please provide the product ID"],
+            unique: true,
+        },
+        quantity: {
+            type: Number,
+            required: [true, "Please provide the quantity"],
+            min: [0, "Quantity cannot be negative"],
+        },
+    },
+],
+ cart: [
+    {
+      productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product",
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        min: [1, "Quantity cannot be less than 1"],
+        default: 1,
+      },
+    },
+  ],
+
+
     },
     {
         timestamps: true,
     }
 );
+
 
 module.exports = mongoose.model("Product", productSchema);
 
