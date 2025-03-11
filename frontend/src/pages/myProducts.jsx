@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MyProduct from "../components/myproducts";
-import axios from "axios";
+// import axios from "axios";
 import NavBar from "../components/nav";
 
 
