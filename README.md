@@ -323,3 +323,75 @@ Steps to Complete
 Set Up Route - Create an Express route to handle address submissions.
 
 Implement Logic - Find user, update their address array, and save changes.
+
+# **Milestone 23 - Place Order Functionality**
+
+**Features Implemented:**
+
+Added a "Place Order" button in the cart page.
+
+Created a "Select Address" page to display and choose a delivery address.
+
+Developed a backend endpoint to fetch user addresses.
+
+Designed a Mongoose schema to store order details.
+
+*Tech Stack:*
+
+Frontend: React
+
+Backend: Node.js, Express.js
+
+Database: MongoDB\
+
+
+# Milestone 24: Order Confirmation Page
+
+## Overview
+In this milestone, we will build the Order Confirmation page for our application. This page will display the ordered products, the selected delivery address, and the total price details. Additionally, it will feature a "Place Order" button to finalize the purchase.
+
+## Learning Goals 🎯
+
+- Understand how to display an order summary.
+- Learn how to retrieve and display user-selected delivery addresses.
+- Calculate and show the total price of the order.
+- Implement the "Place Order" button functionality.
+
+## Steps to Implement 📝
+1. *Display Ordered Products:* Show all the products the user is purchasing, including images, names, prices, and quantities.
+2. *Show Selected Address:* Retrieve and display the address the user has chosen for delivery.
+3. *Calculate Total Price:* Compute the total cost of the order, including any applicable taxes or discounts.
+4. *Add Place Order Button:* Provide a button to confirm the order and proceed with the checkout process.
+
+
+#  Milestone 25: create an backend endpoint for place order.
+
+Overview:
+
+This milestone focuses on creating an Express backend endpoint that handles placing orders. It receives product details, user information, and address data, then processes and stores the order in MongoDB.
+
+
+Features:
+
+- Accepts user email, products, and address details.
+
+- Retrieves user ID from the email.
+
+- Creates individual orders per product.
+
+- Saves orders to the MongoDB orders collection.
+
+
+# Milestone 26 -Get User Orders Endpoint 
+
+Overview:
+
+This milestone focuses on creating an Express backend endpoint that fetches all orders for a specific user. It receives the user's email, retrieves the user’s ID, and fetches the corresponding orders from MongoDB.
+
+Features:
+
+- Fetch User Orders: Get all orders by user email.
+
+- Detailed Order Info: Includes product, quantity, address, and status.
+
+- Error Handling: Handles missing users or orders.
