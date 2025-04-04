@@ -445,7 +445,7 @@ This integration allows users to make secure payments via PayPal, credit, and de
 
 
 
-*Milestone 31 - Redux Global State Management*
+# Milestone 31 - Redux Global State Management
 
 Overview
 In this milestone, we implement Redux for global state management, allowing seamless access to the user's email across components. We configure a Redux store, define actions, and provide the store to the app.
@@ -453,3 +453,24 @@ In this milestone, we implement Redux for global state management, allowing seam
 Tech Stack
 - Frontend: React
 - State Management: Redux, React-Redux
+
+# Milestone 32: Managing Mail with Global State (Redux)
+
+Overview:
+- On the Login page, we used dispatch to save the email.
+
+- On other pages, we used useSelector to access the email from the global state.
+
+- This makes the email available across all pages without passing it as props.
+
+Tech Stack:
+- State Management: Redux, React-Redux
+
+*Milestone 33 - Saving Password and Setting JWT Token in Cookie*
+
+ Overview
+In this milestone, you'll learn how to securely generate a JWT token upon user login and store it in the browser using cookies. This is essential for handling authenticated sessions in full-stack web applications.
+
+Tech Stack:
+Backend :Express.js,jsonwebtoken
+Database: Mongodb

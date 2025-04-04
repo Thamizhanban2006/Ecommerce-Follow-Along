@@ -1,15 +1,36 @@
 /* eslint-disable no-unused-vars */
 import { React, useState } from "react";
+import axios from "axios";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
 import { useDispatch } from 'react-redux';
 import { setemail } from "../../store/UserActions";
+import {useNavigate} from 'react-router-dom';
 
+axios.defaults.withCredentials = true;
 
 
 
 const Login = () => {
 
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:8000/api/v2/user/login", { email, password });
+      console.log(response.data);
+      // Dispatch action to store email in Redux state
+      dispatch(setemail(email));
+      // Redirect to profile page after successful login
+      navigate("/");
+    } catch (error) {
+      console.error("There was an error logging in!", error);
+    }
+  };
+
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate() 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
@@ -105,6 +126,7 @@ const Login = () => {
               <button
                 type="submit"
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                onClick={handleSubmit}
               >
                 Submit
               </button>
