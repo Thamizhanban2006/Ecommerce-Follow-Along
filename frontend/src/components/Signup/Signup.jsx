@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
 import { Link } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
-import axios from 'axios';
+import axios from '../../axiosConfig';
 import { useDispatch } from 'react-redux';
 import { setemail } from "../../store/UserActions";
 
@@ -47,7 +47,7 @@ const Signup = () => {
     };
 
 
-    axios.post("http://localhost:5000/api/v2/user/create-user", newForm, config).then((res) => {
+    axios.post("/api/v2/user/create-user", newForm, config).then((res) => {
       console.log(res.data);
     }).catch((err) => {
       console.log(err);
